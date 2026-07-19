@@ -1,28 +1,21 @@
 import type { Metadata } from "next";
-import { en } from "@/content/site.en";
-import { buildMetadata } from "@/lib/metadata";
-import Hero from "@/components/Hero";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import ContactCTA from "@/components/ContactCTA";
-import StructuredData from "@/components/StructuredData";
+import { headers } from "next/headers";
+import "./globals.css";
 
-export const metadata: Metadata = buildMetadata({
-  title: en.meta.titleHome,
-  description: en.meta.descriptionHome,
-  dePath: "/de",
-  enPath: "/en",
-  lang: "en",
-});
+export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.hansolow-entertainment.de"
+  ),
+};
 
-export default function HomePageEn() {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") ?? "/de";
+  const lang = pathname.startsWith("/en") ? "en" : "de";
+
   return (
-    <>
-      <StructuredData lang="en" />
-      <Hero dict={en} />
-      <AboutSection dict={en} />
-      <ServicesSection dict={en} limit={9} />
-      <ContactCTA dict={en} />
-    </>
+    <html lang={lang}>
+      <body className="bg-base text-ink font-body antialiased">{children}</body>
+    </html>
   );
 }
