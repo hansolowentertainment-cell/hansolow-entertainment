@@ -1,36 +1,72 @@
-import { NextRequest, NextResponse } from "next/server";
+import type { Config } from "tailwindcss";
 
-const SUPPORTED = ["de", "en"];
-const DEFAULT_LANG = "de";
-
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  if (pathname === "/") {
-    const cookieLang = request.cookies.get("lang")?.value;
-    const acceptLanguage = request.headers.get("accept-language") ?? "";
-    const browserPrefersEnglish =
-      !cookieLang && acceptLanguage.toLowerCase().startsWith("en");
-
-    const target =
-      cookieLang && SUPPORTED.includes(cookieLang)
-        ? cookieLang
-        : browserPrefersEnglish
-          ? "en"
-          : DEFAULT_LANG;
-
-    const url = request.nextUrl.clone();
-    url.pathname = `/${target}`;
-    return NextResponse.redirect(url);
-  }
-
-  // Propagate the current pathname so the root layout (a Server Component)
-  // can set the correct <html lang="..."> attribute without client-side JS.
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set("x-pathname", pathname);
-  return NextResponse.next({ request: { headers: requestHeaders } });
-}
-
-export const config = {
-  matcher: ["/((?!_next|api|favicon.ico|images|brand).*)"],
+const config: Config = {
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./content/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        base: "#141414", // page background
+        raised: "#1a1a1a", // cards / raised surfaces (brief base color)
+        recessed: "#0d0d0d", // footer / deep sections
+        ink: "#f5f3ef", // primary text (off-white)
+        "ink-muted": "#a8a6a1", // secondary text
+        line: "#2c2c2c", // hairline dividers
+        accent: "#2f8fff", // electric blue
+        "accent-dim": "#1c5db3",
+        "accent-soft": "rgba(47, 143, 255, 0.12)",
+      },
+      fontFamily: {
+        display: [
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+        body: [
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+        mono: [
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Consolas",
+          "Liberation Mono",
+          "monospace",
+        ],
+      },
+      letterSpacing: {
+        widest2: "0.28em",
+      },
+      maxWidth: {
+        content: "1200px",
+      },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        fadeUp: "fadeUp 0.6s ease-out both",
+      },
+    },
+  },
+  plugins: [],
 };
+
+export default config;

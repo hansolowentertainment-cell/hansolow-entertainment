@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #141414;
+  color: #f5f3ef;
+}
+
+::selection {
+  background-color: #2f8fff;
+  color: #0d0d0d;
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid #2f8fff;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Rigging-line divider: a technical, dashed structural rule used between sections. */
+.rig-line {
+  position: relative;
+  height: 1px;
+  background-image: linear-gradient(to right, #333333 0 6px, transparent 6px 12px);
+  background-size: 12px 1px;
+}
+.rig-line::before,
+.rig-line::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #2f8fff;
+  border-radius: 9999px;
+  background: #141414;
+}
+.rig-line::before {
+  left: 0;
+}
+.rig-line::after {
+  right: 0;
+}
+
+/* Flight-case corner brackets used as the site's signature framing device. */
+.case-corners {
+  position: relative;
+}
+.case-corners::before,
+.case-corners::after,
+.case-corners > .corner-tl,
+.case-corners > .corner-br {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-color: #2f8fff;
+  border-style: solid;
+  border-width: 0;
+  pointer-events: none;
+}
+.case-corners::before {
+  top: -1px;
+  left: -1px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+.case-corners::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.stage-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #a8a6a1;
+}
