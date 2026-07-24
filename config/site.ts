@@ -63,7 +63,7 @@ export const LEGAL = {
  */
 export const PARTNER_NAMES = {
   pfennigbau: "Pfennigbau", // TODO: Schreibweise pruefen
-  balativ: "Balativ", // TODO: Schreibweise pruefen
+  baunativ: "Baunativ", // TODO: Schreibweise pruefen
 };
 
 export const SOCIAL = {
