@@ -21,8 +21,8 @@ export const touringReferences: Reference[] = [
     titleEN: "EU/UK Tour",
     dateDE: "Oktober 2024",
     dateEN: "October 2024",
-    scopeDE: "Tour Support und Bühnenaufbau",
-    scopeEN: "Tour support and stage construction",
+    scopeDE: "Tour Support, Bühnenaufbau und Lichtassistenz",
+    scopeEN: "Tour support, stage construction and Lighting Support",
   },
   {
     id: "imminence-scandinavia-2025",
@@ -31,8 +31,8 @@ export const touringReferences: Reference[] = [
     titleEN: "Scandinavia Tour",
     dateDE: "Februar 2025",
     dateEN: "February 2025",
-    scopeDE: "Tour Support, Bühnenaufbau und Preproduction Support",
-    scopeEN: "Tour support, stage construction and preproduction support",
+    scopeDE: "Tour Support, Bühnenaufbau, Preproduction Support und Lichtassistenz",
+    scopeEN: "Tour support, stage construction, preproduction support and Lighting Support",
   },
   {
     id: "imminence-festival-2025",
@@ -41,8 +41,8 @@ export const touringReferences: Reference[] = [
     titleEN: "Festival Tour",
     dateDE: "2025",
     dateEN: "2025",
-    scopeDE: "Tour Support und Bühnenaufbau",
-    scopeEN: "Tour support and stage construction",
+    scopeDE: "Tour Support, Bühnenaufbau, Preproduction Support und Lichtassistenz",
+    scopeEN: "Tour support, stage construction, preproduction support and Lighting Support",
   },
   {
     id: "imminence-eu-arena-2025",
@@ -51,8 +51,8 @@ export const touringReferences: Reference[] = [
     titleEN: "EU Arena Tour",
     dateDE: "Dezember 2025",
     dateEN: "December 2025",
-    scopeDE: "Tour Support mit erweiterter Verantwortung innerhalb der Bühnenabläufe",
-    scopeEN: "Tour support with extended responsibility within stage operations",
+    scopeDE: "Tour Support mit erweiterter Verantwortung als Stage Lead / Stage Management",
+    scopeEN: "Tour support with extended responsibility as Stage Lead / Stage Management",
   },
   {
     id: "imminence-summer-2026",
@@ -61,8 +61,8 @@ export const touringReferences: Reference[] = [
     titleEN: "2026 Festival Summer",
     dateDE: "2026",
     dateEN: "2026",
-    scopeDE: "Tour Support, Bühnenaufbau und Produktionsunterstützung",
-    scopeEN: "Tour support, stage construction and production support",
+    scopeDE: "Tour Support, Bühnenaufbau, Produktionsunterstützung, Preproduction Support und Lichtassistenz",
+    scopeEN: "Tour support, stage construction, production support, preproduction support and Lighting Support",
   },
 ];
 
