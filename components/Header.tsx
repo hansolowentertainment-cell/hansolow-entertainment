@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Dictionary } from "@/lib/i18n";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import MobileNavigation from "@/components/MobileNavigation";
@@ -10,19 +9,11 @@ export default function Header({ dict }: { dict: Dictionary }) {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-base/95 backdrop-blur">
       <div className="mx-auto flex max-w-content items-center justify-between px-5 py-4 sm:px-8">
-        <Link href={homeHref} className="focus-ring flex items-center gap-2 rounded">
-          <Image
-            src="/brand/logo-mark-64.png"
-            alt=""
-            width={32}
-            height={32}
-            className="h-8 w-8 rounded-sm"
-            priority
-          />
+        <Link href={homeHref} className="focus-ring rounded">
           <span className="font-display text-lg font-semibold tracking-tight text-ink">
             Hansolow<span className="text-accent">.</span>
           </span>
-          <span className="ml-1 hidden text-xs uppercase tracking-widest2 text-ink-muted sm:inline">
+          <span className="ml-2 hidden text-xs uppercase tracking-widest2 text-ink-muted sm:inline">
             Entertainment
           </span>
         </Link>
