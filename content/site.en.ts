@@ -8,13 +8,13 @@ export const en: Dictionary = {
       "Freelance tour support, stage construction and production support for touring, festivals, TV productions and trade shows across Germany and internationally.",
     titleAbout: "About | Hansolow Entertainment",
     descriptionAbout:
-      "Hans Schröder Salowski – freelance stage construction and production support professional with practical experience in touring and TV productions.",
+      "Hans Schröder-Salowski – freelance stage construction and production support professional with practical experience in touring and TV productions.",
     titleServices: "Services | Hansolow Entertainment",
     descriptionServices:
       "Stage construction, tour support, festival support, TV production support, event support, Lighting Support and trade show construction – available on a project basis.",
     titleExperience: "Experience | Hansolow Entertainment",
     descriptionExperience:
-      "Touring productions, TV productions, major events and trade show projects involving Hans Schröder Salowski.",
+      "Touring productions, TV productions, major events and trade show projects involving Hans Schröder-Salowski.",
     titleGallery: "Gallery | Hansolow Entertainment",
     descriptionGallery: "A look at stage construction, touring, festivals and production environments.",
     titleContact: "Request availability | Hansolow Entertainment",
@@ -43,7 +43,7 @@ export const en: Dictionary = {
   },
   hero: {
     eyebrow: "Tour Support · Stage Construction · Event Support",
-    title: "Hans Schröder Salowski",
+    title: "Hans Schröder-Salowski",
     subtitle:
       "Freelance Stage Construction and Tour Support for Touring, Festivals, TV Productions and Trade Shows",
     tagline: "Based near Leipzig, Germany · Available nationwide and internationally",
@@ -62,7 +62,7 @@ export const en: Dictionary = {
     eyebrow: "About",
     heading: "Stage construction with a clear process",
     paragraphs: [
-      "Hans Schröder Salowski is a freelance stage construction and production support professional with practical experience in touring, event setup, festivals, TV productions and trade shows. His work focuses on reliable execution, clear workflows and structured load-ins, changeovers and load-outs.",
+      "Hans Schröder-Salowski is a freelance stage construction and production support professional with practical experience in touring, event setup, festivals, TV productions and trade shows. His work focuses on reliable execution, clear workflows and structured load-ins, changeovers and load-outs.",
       "This includes operational support during rehearsals, shows and changeovers, as well as additional experience in trade show construction.",
       "He works on a project basis, integrates into changing crews and follows the requirements of stage, production and technical management.",
     ],
