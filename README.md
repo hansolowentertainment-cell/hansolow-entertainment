@@ -1,6 +1,6 @@
 # Hansolow Entertainment – Website
 
-Projektbasierte Business-Website für **Hans Schröder Salowski / Hansolow Entertainment**
+Projektbasierte Business-Website für **Hans Schröder-Salowski / Hansolow Entertainment**
 (Tour Support, Stage Construction, Event Support, Lichtassistenz, Messebau).
 Kein Künstler-, Musik- oder Tonstudio-Auftritt – ausschließlich zur Gewinnung von
 Projektanfragen.
@@ -93,7 +93,7 @@ verteilt:
 | `content/site.en.ts` | Dieselbe Struktur auf Englisch |
 | `content/references.ts` | Touring-, TV/Großveranstaltungs- und Messebau-Referenzen (Kunde, Titel, Datum, Aufgabenbereich – jeweils DE/EN) |
 | `content/gallery.ts` | Galeriebilder inkl. Alt-Texten, Bildunterschriften und Kategorie |
-| `config/site.ts` | Kontaktdaten, Instagram-URL, Impressums-Rohdaten, Schreibweise von Pfennigbau/Balativ |
+| `config/site.ts` | Kontaktdaten, Instagram-URL, Impressums-Rohdaten, Schreibweise von Pfennigbau/Baunativ |
 
 Beide Sprachdateien (`site.de.ts` / `site.en.ts`) folgen demselben Typ (`Dictionary` in
 `lib/i18n.ts`). Wird ein Feld in einer Sprache ergänzt, muss es in der anderen Sprache
@@ -213,10 +213,9 @@ Kontaktdaten). Es wurden bewusst **keine** Angaben erfunden. Konkret noch offen:
 - [ ] **Hostinganbieter** in der Datenschutzerklärung benennen, sobald das Hosting
       final feststeht (`app/de/datenschutz/page.tsx`, `app/en/privacy/page.tsx`,
       Abschnitt „Zugriffsdaten / Server-Logfiles")
-- [ ] **Namensschreibweise prüfen**: Das Impressum nutzt „Hans Schröder-Salowski"
-      (mit Bindestrich, laut bereitgestelltem Impressum-Dokument), während Hero,
-      Über-mich-Seite usw. weiterhin „Hans Schröder Salowski" (ohne Bindestrich)
-      verwenden. Bitte entscheiden, ob das sitewide vereinheitlicht werden soll.
+- [x] **Namensschreibweise vereinheitlicht**: "Hans Schröder-Salowski" (mit
+      Bindestrich) wird jetzt sitewide konsistent verwendet, auf Wunsch des
+      Websitebetreibers.
 - [ ] Beide Rechtstexte durch eine fachkundige Person (Rechtsberatung) final prüfen
       lassen
 - [ ] Falls später Analyse-, Marketing- oder weitere Tools ergänzt werden, die
@@ -274,10 +273,10 @@ erwartet – ein echter lokaler Build-Lauf ersetzt diese Prüfung aber nicht.
 - [ ] Umsatzsteuer-ID ergänzen, sobald erteilt
 - [ ] Hostinganbieter in der Datenschutzerklärung benannt
 - [ ] Instagram-URL final geprüft und gesetzt (oder bewusst leer gelassen)
-- [ ] Schreibweise und Zuordnung von „Pfennigbau" und „Balativ" final geprüft
+- [ ] Schreibweise und Zuordnung von „Pfennigbau" und „Baunativ" final geprüft
       (`config/site.ts`, `PARTNER_NAMES`)
-- [ ] Referenzformulierungen (insbesondere Festivalsommer 2026 / Eminem) final
-      freigegeben
+- [x] Referenzformulierungen final geprüft — ein nicht zutreffender Festival-Eintrag
+      (Festivalsommer 2026 / Eminem) wurde auf Hinweis des Websitebetreibers entfernt
 - [ ] Kontaktformular-Versand konfiguriert (z. B. Resend) oder mailto-Fallback
       bewusst als Dauerlösung akzeptiert
 - [ ] Auf einem echten Smartphone/Tablet getestet (Navigation, Formular,

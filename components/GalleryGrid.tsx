@@ -167,8 +167,8 @@ function FilterButton({
       aria-pressed={active}
       className={`focus-ring rounded-full border px-4 py-1.5 text-xs uppercase tracking-widest2 transition-colors ${
         active
-          ? "border-accent text-accent"
-          : "border-line text-ink-muted hover:border-ink-muted hover:text-ink"
+          ? "border-accent bg-accent-soft text-accent"
+          : "border-line bg-raised text-ink-muted hover:border-ink-muted hover:text-ink"
       }`}
     >
       {children}

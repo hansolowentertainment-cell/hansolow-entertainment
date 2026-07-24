@@ -316,7 +316,6 @@ export const de: Dictionary = {
     privacy: "Datenschutz",
     rights: "Alle Rechte vorbehalten.",
   },
-};
   legal: {
     imprintHeading: "Impressum",
     imprintIntro: "Angaben gemäß § 5 TMG.",
@@ -336,3 +335,4 @@ export const de: Dictionary = {
     instagram: "Instagram",
     backHome: "Zurück zur Startseite",
   },
+};
