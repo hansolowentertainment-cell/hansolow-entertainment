@@ -22,9 +22,7 @@ export default function MobileNavigation({
 }: MobileNavigationProps) {
   const [open, setOpen] = useState(false);
 
-  // Lock background scroll while the menu is open. Without this, the page
-  // behind the overlay can keep scrolling on some mobile browsers, which is
-  // what caused the underlying content to visually bleed through the menu.
+  // Lock background scroll while the menu is open.
   useEffect(() => {
     if (open) {
       const previousOverflow = document.documentElement.style.overflow;
@@ -48,28 +46,87 @@ export default function MobileNavigation({
       </button>
 
       {open ? (
+        // Every visible piece below is styled with inline `style` objects on
+        // purpose, not Tailwind classes — so nothing here can silently
+        // disappear due to a class being missing from the production CSS
+        // bundle. This is the fix for the menu opening but showing no items.
         <div
-          className="fixed inset-0 z-50 overflow-y-auto bg-recessed"
-          style={{ overscrollBehavior: "contain" }}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 9999,
+            backgroundColor: "#0d0d0d",
+            overflowY: "auto",
+            display: "flex",
+            flexDirection: "column",
+          }}
         >
-          <div className="sticky top-0 flex items-center justify-between border-b border-line bg-recessed px-5 py-4">
-            <span className="stage-tag text-accent">Menü / Menu</span>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "16px 20px",
+              borderBottom: "1px solid #2c2c2c",
+              backgroundColor: "#0d0d0d",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "ui-monospace, monospace",
+                fontSize: 11,
+                letterSpacing: "0.28em",
+                textTransform: "uppercase",
+                color: "#2f8fff",
+              }}
+            >
+              Menü / Menu
+            </span>
             <button
               type="button"
               onClick={() => setOpen(false)}
               aria-label={closeLabel}
-              className="focus-ring flex h-11 w-11 items-center justify-center rounded border border-line text-ink"
+              style={{
+                display: "flex",
+                height: 44,
+                width: 44,
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 4,
+                border: "1px solid #2c2c2c",
+                color: "#f5f3ef",
+                background: "transparent",
+              }}
             >
               <X size={20} aria-hidden="true" />
             </button>
           </div>
-          <nav className="flex flex-col gap-1 bg-recessed px-5 py-6">
+
+          <nav
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 4,
+              padding: "24px 20px",
+              backgroundColor: "#0d0d0d",
+            }}
+          >
             {items.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="focus-ring rounded border-b border-line py-3 text-xl font-display text-ink"
+                style={{
+                  display: "block",
+                  padding: "14px 4px",
+                  fontSize: 22,
+                  color: "#f5f3ef",
+                  borderBottom: "1px solid #2c2c2c",
+                  textDecoration: "none",
+                }}
               >
                 {item.label}
               </Link>
@@ -77,7 +134,19 @@ export default function MobileNavigation({
             <Link
               href={ctaHref}
               onClick={() => setOpen(false)}
-              className="focus-ring mt-6 inline-flex items-center justify-center rounded bg-accent px-6 py-3 text-base font-medium text-recessed"
+              style={{
+                marginTop: 24,
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 4,
+                backgroundColor: "#2f8fff",
+                padding: "14px 24px",
+                fontSize: 16,
+                fontWeight: 500,
+                color: "#0d0d0d",
+                textDecoration: "none",
+              }}
             >
               {ctaLabel}
             </Link>
