@@ -8,13 +8,13 @@ export const de: Dictionary = {
       "Projektbasierter Tour Support, Bühnenbau, Lichtassistenz und Produktionsunterstützung für Touring, Festivals, TV-Produktionen und Messebau. Deutschlandweit und international einsetzbar.",
     titleAbout: "Über mich | Hansolow Entertainment",
     descriptionAbout:
-      "Hans Schröder Salowski – selbstständiger Bühnenhandwerker mit praktischer Erfahrung im Veranstaltungsaufbau, Touring und TV-Produktionen.",
+      "Hans Schröder-Salowski – selbstständiger Bühnenhandwerker mit praktischer Erfahrung im Veranstaltungsaufbau, Touring und TV-Produktionen.",
     titleServices: "Leistungen | Hansolow Entertainment",
     descriptionServices:
       "Bühnenbau, Tour Support, Festival Support, TV Production Support, Event Support, Lichtassistenz und Messebau – projektweise einsetzbar.",
     titleExperience: "Referenzen | Hansolow Entertainment",
     descriptionExperience:
-      "Tourproduktionen, TV-Produktionen, Großveranstaltungen und Messebau-Projekte mit Beteiligung von Hans Schröder Salowski.",
+      "Tourproduktionen, TV-Produktionen, Großveranstaltungen und Messebau-Projekte mit Beteiligung von Hans Schröder-Salowski.",
     titleGallery: "Galerie | Hansolow Entertainment",
     descriptionGallery: "Einblicke in Bühnenbau, Touring, Festivals und Produktionsumfelder.",
     titleContact: "Projekt anfragen | Hansolow Entertainment",
@@ -43,7 +43,7 @@ export const de: Dictionary = {
   },
   hero: {
     eyebrow: "Tour Support · Stage Construction · Event Support",
-    title: "Hans Schröder Salowski",
+    title: "Hans Schröder-Salowski",
     subtitle:
       "Selbstständiger Bühnenhandwerker für Touring, Festivals, TV-Produktionen und Messebau",
     tagline: "Kühren bei Leipzig · Deutschlandweit und international einsetzbar",
@@ -62,7 +62,7 @@ export const de: Dictionary = {
     eyebrow: "Über mich",
     heading: "Bühnenhandwerk mit klarem Ablauf",
     paragraphs: [
-      "Hans Schröder Salowski ist selbstständiger Bühnenhandwerker mit praktischer Erfahrung im Veranstaltungsaufbau, Bühnenbau und Touring-Umfeld. Der Schwerpunkt liegt auf zuverlässigem Arbeiten, klaren Abläufen sowie einem sauberen und strukturierten Auf- und Abbau.",
+      "Hans Schröder-Salowski ist selbstständiger Bühnenhandwerker mit praktischer Erfahrung im Veranstaltungsaufbau, Bühnenbau und Touring-Umfeld. Der Schwerpunkt liegt auf zuverlässigem Arbeiten, klaren Abläufen sowie einem sauberen und strukturierten Auf- und Abbau.",
       "Dazu kommen operative Einsätze während Proben, Shows und Umbauten sowie ergänzende Erfahrung im Messebau.",
       "Er arbeitet projektweise, fügt sich flexibel in wechselnde Crews ein und setzt Vorgaben der Stage-, Produktions- und technischen Leitung zuverlässig um.",
     ],
@@ -316,6 +316,7 @@ export const de: Dictionary = {
     privacy: "Datenschutz",
     rights: "Alle Rechte vorbehalten.",
   },
+};
   legal: {
     imprintHeading: "Impressum",
     imprintIntro: "Angaben gemäß § 5 TMG.",
@@ -335,4 +336,3 @@ export const de: Dictionary = {
     instagram: "Instagram",
     backHome: "Zurück zur Startseite",
   },
-};
