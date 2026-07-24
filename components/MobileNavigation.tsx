@@ -109,7 +109,7 @@ export default function MobileNavigation({
         type="checkbox"
         id="mnav-toggle"
         className="mnav-checkbox"
-        aria-hidden="true"
+        aria-label={openLabel}
       />
 
       <label

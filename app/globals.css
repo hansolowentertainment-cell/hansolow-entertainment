@@ -73,9 +73,7 @@ body {
   position: relative;
 }
 .case-corners::before,
-.case-corners::after,
-.case-corners > .corner-tl,
-.case-corners > .corner-br {
+.case-corners::after {
   content: "";
   position: absolute;
   width: 22px;

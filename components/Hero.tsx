@@ -92,8 +92,6 @@ export default function Hero({ dict }: { dict: Dictionary }) {
         </div>
 
         <div className="case-corners relative aspect-[4/5] w-full overflow-hidden border border-line bg-raised sm:aspect-[4/3] lg:aspect-[4/5]">
-          <span className="corner-tl" aria-hidden="true" />
-          <span className="corner-br" aria-hidden="true" />
           <Image
             src="/images/gallery/lighting-rig-above-stage.jpg"
             alt="Lichtrigging über der Bühne"
