@@ -4,6 +4,8 @@ import type { Dictionary } from "@/lib/i18n";
 import { BRAND_NAME } from "@/config/site";
 
 export default function Hero({ dict }: { dict: Dictionary }) {
+  const ownerLabel = dict.lang === "de" ? "Inhaber" : "Owner";
+
   return (
     <section className="relative overflow-hidden border-b border-line">
       {/* Atmospheric real production photo behind the whole hero, dimmed
@@ -29,13 +31,36 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             <p className="stage-tag text-accent">{dict.hero.eyebrow}</p>
           </div>
 
-          <h1 className="mt-4 font-display text-5xl font-semibold leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-            Hansolow<span className="text-accent">.</span>
-            <span className="block text-2xl font-normal tracking-wide text-ink-muted sm:text-3xl">
-              Entertainment
-            </span>
-          </h1>
-          <p className="mt-5 text-base font-medium text-accent sm:text-lg">{dict.hero.title}</p>
+          {/* Logo mark + wordmark lockup — the actual brand logo, not just type,
+              since the logo itself is a recognised part of the brand. */}
+          <div className="mt-5 flex items-center gap-4">
+            <Image
+              src="/brand/logo-mark-128.png"
+              alt={`${BRAND_NAME} Logo`}
+              width={72}
+              height={72}
+              priority
+              className="h-14 w-14 shrink-0 sm:h-[72px] sm:w-[72px]"
+              style={{ filter: "drop-shadow(0 4px 18px rgba(47,143,255,0.45))" }}
+            />
+            <h1
+              className="font-display text-4xl font-semibold leading-[1.02] tracking-tight text-ink sm:text-5xl lg:text-6xl"
+              style={{ textShadow: "0 2px 24px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)" }}
+            >
+              Hansolow<span className="text-accent">.</span>
+              <span className="block text-xl font-normal tracking-wide text-ink-muted sm:text-2xl">
+                Entertainment
+              </span>
+            </h1>
+          </div>
+
+          {/* Owner byline: solid backing chip so it stays legible regardless
+              of what's behind it in the hero photo. */}
+          <div className="mt-5 inline-flex items-center gap-2 rounded bg-recessed/80 px-3 py-2 backdrop-blur-sm">
+            <span className="stage-tag text-accent">{ownerLabel}</span>
+            <span className="text-base font-semibold text-ink sm:text-lg">{dict.hero.title}</span>
+          </div>
+
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">
             {dict.hero.subtitle}
           </p>
