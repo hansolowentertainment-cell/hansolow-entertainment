@@ -64,16 +64,6 @@ export const touringReferences: Reference[] = [
     scopeDE: "Tour Support, Bühnenaufbau und Produktionsunterstützung",
     scopeEN: "Tour support, stage construction and production support",
   },
-  {
-    id: "festival-summer-2026-eminem",
-    client: "Festivalsommer 2026",
-    titleDE: "Einsatz im Produktionsumfeld eines Festivalsommers 2026 mit Eminem im Line-up",
-    titleEN: "Production support within a 2026 festival environment featuring Eminem in the line-up",
-    dateDE: "2026",
-    dateEN: "2026",
-    scopeDE: "Bühnenaufbau und Produktionsunterstützung im Festivalumfeld",
-    scopeEN: "Stage construction and production support within the festival environment",
-  },
 ];
 
 /** TV-Produktionen und Großveranstaltungen. */
@@ -169,8 +159,8 @@ export const tradeShowReferences: Reference[] = [
     titleEN: "Handwerksmesse Leipzig (Trade Fair)",
     dateDE: "",
     dateEN: "",
-    scopeDE: "Messestandbau im Auftrag von Pfennigbau / Balativ",
-    scopeEN: "Trade show booth construction on behalf of Pfennigbau / Balativ",
+    scopeDE: "Messestandbau im Auftrag von Pfennigbau / Baunativ",
+    scopeEN: "Trade show booth construction on behalf of Pfennigbau / Baunativ",
   },
   {
     id: "haus-garten-freizeit-leipzig",
@@ -179,8 +169,8 @@ export const tradeShowReferences: Reference[] = [
     titleEN: "Haus-Garten-Freizeit Leipzig (Trade Fair)",
     dateDE: "",
     dateEN: "",
-    scopeDE: "Messestandbau im Auftrag von Pfennigbau / Balativ",
-    scopeEN: "Trade show booth construction on behalf of Pfennigbau / Balativ",
+    scopeDE: "Messestandbau im Auftrag von Pfennigbau / Baunativ",
+    scopeEN: "Trade show booth construction on behalf of Pfennigbau / Baunativ",
   },
   {
     id: "leipziger-buchmesse-messebau",
@@ -214,9 +204,9 @@ export const tradeShowReferences: Reference[] = [
   },
   {
     id: "balativ-lager-2026",
-    client: "Balativ",
-    titleDE: "Lagerumstrukturierung Balativ",
-    titleEN: "Warehouse reorganisation, Balativ",
+    client: "Baunativ",
+    titleDE: "Lagerumstrukturierung Baunativ",
+    titleEN: "Warehouse reorganisation, Baunativ",
     dateDE: "2026",
     dateEN: "2026",
     scopeDE: "Unterstützung bei der Lagerumstrukturierung",
