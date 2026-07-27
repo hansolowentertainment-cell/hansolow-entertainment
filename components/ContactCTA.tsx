@@ -12,7 +12,7 @@ export default function ContactCTA({ dict }: { dict: Dictionary }) {
         fill
         sizes="100vw"
         className="object-cover"
-        style={{ filter: "grayscale(0.3) brightness(0.28) contrast(1.05)" }}
+        style={{ filter: "grayscale(0.15) saturate(1.1) brightness(0.3) contrast(1.05)" }}
       />
       <div className="absolute inset-0 bg-raised/90" />
       <div className="relative mx-auto max-w-content px-5 py-14 text-center sm:px-8 sm:py-16">
