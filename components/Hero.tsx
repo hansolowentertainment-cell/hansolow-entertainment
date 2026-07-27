@@ -91,7 +91,10 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           </ul>
         </div>
 
-        <div className="case-corners relative aspect-[4/5] w-full overflow-hidden border border-line bg-raised sm:aspect-[4/3] lg:aspect-[4/5]">
+        <div
+          className="relative aspect-[4/5] w-full overflow-hidden border sm:aspect-[4/3] lg:aspect-[4/5]"
+          style={{ borderColor: "#000000", borderWidth: 1 }}
+        >
           <Image
             src="/images/gallery/lighting-rig-above-stage.jpg"
             alt="Lichtrigging über der Bühne"
@@ -101,13 +104,8 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-recessed/85 via-transparent to-transparent" />
-          <div className="absolute left-4 top-4 flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            <span className="stage-tag text-ink-muted">{BRAND_NAME}</span>
-          </div>
         </div>
       </div>
-      <div className="rig-line relative mx-5 sm:mx-8" />
     </section>
   );
 }
