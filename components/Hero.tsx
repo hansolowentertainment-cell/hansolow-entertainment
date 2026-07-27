@@ -56,18 +56,18 @@ export default function Hero({ dict }: { dict: Dictionary }) {
 
           {/* Owner byline with a small portrait photo, so visitors connect
               with the person behind the business, not just the brand name. */}
-          <div className="mt-5 inline-flex items-center gap-3 rounded bg-recessed/80 py-2 pl-2 pr-3 backdrop-blur-sm">
+          <div className="mt-5 inline-flex items-center gap-3 rounded bg-recessed/80 py-2.5 pl-2.5 pr-4 backdrop-blur-sm">
             <Image
               src="/images/portrait/hans-portrait.jpg"
               alt={dict.hero.title}
-              width={40}
-              height={40}
-              className="h-10 w-10 shrink-0 rounded-full object-cover"
-              style={{ border: "1px solid #2f8fff" }}
+              width={64}
+              height={64}
+              className="h-16 w-16 shrink-0 rounded-full object-cover"
+              style={{ border: "2px solid #2f8fff" }}
             />
             <div>
               <span className="stage-tag block text-accent">{ownerLabel}</span>
-              <span className="text-base font-semibold text-ink sm:text-lg">{dict.hero.title}</span>
+              <span className="text-lg font-semibold text-ink sm:text-xl">{dict.hero.title}</span>
             </div>
           </div>
 
