@@ -1,0 +1,308 @@
+export type GalleryCategory =
+  | "touring"
+  | "festivals"
+  | "tv"
+  | "stage"
+  | "tradeshow"
+  | "backstage";
+
+export interface GalleryImage {
+  id: string;
+  src: string;
+  altDE: string;
+  altEN: string;
+  captionDE: string;
+  captionEN: string;
+  category: GalleryCategory;
+}
+
+/**
+ * Echte Produktionsfotos, vom Websitebetreiber bereitgestellt.
+ * Bildunterschriften sind bewusst neutral-beschreibend gehalten (keine
+ * Bandnamen/Auftraggeber), um keine ungeprüften Engagements zu suggerieren.
+ * Zwei ursprünglich hochgeladene Bilder wurden nicht übernommen, da es sich
+ * um Instagram-App-Screenshots handelte (fremde UI bzw. Repost eines
+ * anderen Accounts), keine eigene Produktionsfotografie.
+ * Messebau hat aktuell keine eigenen Fotos - siehe README.
+ */
+export const galleryImages: GalleryImage[] = [
+  {
+    id: "photo-01",
+    src: "/images/gallery/view-from-stage-crowd.jpg",
+    altDE: "Blick von der Bühne ins Publikum",
+    altEN: "View from the stage into the crowd",
+    captionDE: "Blick von der Bühne ins Publikum",
+    captionEN: "View from the stage into the crowd",
+    category: "festivals",
+  },
+  {
+    id: "photo-02",
+    src: "/images/gallery/lighting-prep-backstage.jpg",
+    altDE: "Vorbereitung der Lichtelemente backstage",
+    altEN: "Preparing lighting elements backstage",
+    captionDE: "Vorbereitung der Lichtelemente backstage",
+    captionEN: "Preparing lighting elements backstage",
+    category: "backstage",
+  },
+  {
+    id: "photo-03",
+    src: "/images/gallery/tour-stage-show.jpg",
+    altDE: "Bühnenshow im Tour-Setup",
+    altEN: "Stage show in touring setup",
+    captionDE: "Bühnenshow im Tour-Setup",
+    captionEN: "Stage show in touring setup",
+    category: "touring",
+  },
+  {
+    id: "photo-04",
+    src: "/images/gallery/stage-build-aerial.jpg",
+    altDE: "Bühnenaufbau aus der Vogelperspektive",
+    altEN: "Stage build, aerial view",
+    captionDE: "Bühnenaufbau aus der Vogelperspektive",
+    captionEN: "Stage build, aerial view",
+    category: "stage",
+  },
+  {
+    id: "photo-05",
+    src: "/images/gallery/crowd-sunset.jpg",
+    altDE: "Publikum bei Sonnenuntergang",
+    altEN: "Crowd at sunset",
+    captionDE: "Publikum bei Sonnenuntergang",
+    captionEN: "Crowd at sunset",
+    category: "festivals",
+  },
+  {
+    id: "photo-07",
+    src: "/images/gallery/cable-management.jpg",
+    altDE: "Kabelmanagement backstage",
+    altEN: "Cable management backstage",
+    captionDE: "Kabelmanagement backstage",
+    captionEN: "Cable management backstage",
+    category: "backstage",
+  },
+  {
+    id: "photo-08",
+    src: "/images/gallery/break-during-setup.jpg",
+    altDE: "Kurze Pause während des Aufbaus",
+    altEN: "Short break during setup",
+    captionDE: "Kurze Pause während des Aufbaus",
+    captionEN: "Short break during setup",
+    category: "backstage",
+  },
+  {
+    id: "photo-10",
+    src: "/images/gallery/lighting-rig-above-stage.jpg",
+    altDE: "Lichtrigging über der Bühne",
+    altEN: "Lighting rig above the stage",
+    captionDE: "Lichtrigging über der Bühne",
+    captionEN: "Lighting rig above the stage",
+    category: "stage",
+  },
+  {
+    id: "photo-11",
+    src: "/images/gallery/central-stage-major-event.jpg",
+    altDE: "Zentrale Bühne bei einer Großveranstaltung",
+    altEN: "Central stage at a major event",
+    captionDE: "Zentrale Bühne bei einer Großveranstaltung",
+    captionEN: "Central stage at a major event",
+    category: "tv",
+  },
+  {
+    id: "photo-12",
+    src: "/images/gallery/open-air-stage-rain.jpg",
+    altDE: "Open-Air-Bühne im Regen",
+    altEN: "Open-air stage in the rain",
+    captionDE: "Open-Air-Bühne im Regen",
+    captionEN: "Open-air stage in the rain",
+    category: "festivals",
+  },
+  {
+    id: "photo-13",
+    src: "/images/gallery/roadcases-load-out.jpg",
+    altDE: "Roadcases vor dem Load-out",
+    altEN: "Road cases before load-out",
+    captionDE: "Roadcases vor dem Load-out",
+    captionEN: "Road cases before load-out",
+    category: "backstage",
+  },
+  {
+    id: "photo-14",
+    src: "/images/gallery/tv-stage-set-build.jpg",
+    altDE: "Aufbau eines TV-Bühnenbilds",
+    altEN: "Building a TV stage set",
+    captionDE: "Aufbau eines TV-Bühnenbilds",
+    captionEN: "Building a TV stage set",
+    category: "tv",
+  },
+  {
+    id: "photo-15",
+    src: "/images/gallery/crew-member-on-site.jpg",
+    altDE: "Crew-Mitglied vor Ort",
+    altEN: "Crew member on site",
+    captionDE: "Crew-Mitglied vor Ort",
+    captionEN: "Crew member on site",
+    category: "backstage",
+  },
+  {
+    id: "photo-16",
+    src: "/images/gallery/stage-show-lighting-effects.jpg",
+    altDE: "Bühnenshow mit Lichteffekten",
+    altEN: "Stage show with lighting effects",
+    captionDE: "Bühnenshow mit Lichteffekten",
+    captionEN: "Stage show with lighting effects",
+    category: "tv",
+  },
+  {
+    id: "photo-17",
+    src: "/images/gallery/stage-mirrored-rig.jpg",
+    altDE: "Bühnenaufbau mit Spiegel-Rig",
+    altEN: "Stage setup with a mirrored rig",
+    captionDE: "Bühnenaufbau mit Spiegel-Rig",
+    captionEN: "Stage setup with a mirrored rig",
+    category: "tv",
+  },
+  {
+    id: "photo-18",
+    src: "/images/gallery/historic-event-venue.jpg",
+    altDE: "Im Innenraum einer historischen Veranstaltungshalle",
+    altEN: "Inside a historic event venue",
+    captionDE: "Im Innenraum einer historischen Veranstaltungshalle",
+    captionEN: "Inside a historic event venue",
+    category: "backstage",
+  },
+  {
+    id: "photo-19",
+    src: "/images/gallery/workshop-stage-elements.jpg",
+    altDE: "Werkstattaufbau für Bühnenelemente",
+    altEN: "Workshop assembly of stage elements",
+    captionDE: "Werkstattaufbau für Bühnenelemente",
+    captionEN: "Workshop assembly of stage elements",
+    category: "stage",
+  },
+  {
+    id: "photo-20",
+    src: "/images/gallery/stage-show-fan-beam-lighting.jpg",
+    altDE: "Bühnenshow mit Lichtfächer",
+    altEN: "Stage show with fan-beam lighting",
+    captionDE: "Bühnenshow mit Lichtfächer",
+    captionEN: "Stage show with fan-beam lighting",
+    category: "tv",
+  },
+  {
+    id: "photo-21",
+    src: "/images/gallery/art-nouveau-ballroom-stage.jpg",
+    altDE: "Bühnenaufbau in einem historischen Jugendstil-Saal",
+    altEN: "Stage build inside a historic Art Nouveau hall",
+    captionDE: "Bühnenaufbau in historischem Saal",
+    captionEN: "Stage build in a historic hall",
+    category: "stage",
+  },
+  {
+    id: "photo-22",
+    src: "/images/gallery/tradeshow-corridor-build.jpg",
+    altDE: "Aufbau von Messeständen in einer Ausstellungshalle",
+    altEN: "Trade show booth construction inside an exhibition hall",
+    captionDE: "Messestandbau in der Ausstellungshalle",
+    captionEN: "Trade show booth construction",
+    category: "tradeshow",
+  },
+  {
+    id: "photo-23",
+    src: "/images/gallery/flight-case-warehouse.jpg",
+    altDE: "Lager mit Roadcases und Equipment vor dem Transport",
+    altEN: "Warehouse with road cases and equipment before transport",
+    captionDE: "Lager mit Roadcases vor dem Transport",
+    captionEN: "Warehouse with road cases before transport",
+    category: "backstage",
+  },
+  {
+    id: "photo-24",
+    src: "/images/gallery/gothic-arch-stage-wide.jpg",
+    altDE: "Bühne mit gotischen Bogenelementen bei einer Show",
+    altEN: "Stage with gothic arch elements during a show",
+    captionDE: "Bühnenbild mit gotischen Bogenelementen",
+    captionEN: "Stage set with gothic arch elements",
+    category: "touring",
+  },
+  {
+    id: "photo-25",
+    src: "/images/gallery/gothic-stage-set-empty.jpg",
+    altDE: "Aufgebautes Bühnenbild mit gotischen Fensterelementen",
+    altEN: "Assembled stage set with gothic window elements",
+    captionDE: "Bühnenbild vor dem Einsatz",
+    captionEN: "Stage set before the show",
+    category: "stage",
+  },
+  {
+    id: "photo-26",
+    src: "/images/gallery/crew-band-huddle-arena.jpg",
+    altDE: "Crew und Band nach der Show auf der Bühne",
+    altEN: "Crew and band on stage after the show",
+    captionDE: "Nach der Show, gemeinsam auf der Bühne",
+    captionEN: "After the show, together on stage",
+    category: "touring",
+  },
+  {
+    id: "photo-27",
+    src: "/images/gallery/workshop-riser-build.jpg",
+    altDE: "Aufbau von Bühnenpodesten in der Werkstatt",
+    altEN: "Assembling stage risers in the workshop",
+    captionDE: "Podestaufbau in der Werkstatt",
+    captionEN: "Riser assembly in the workshop",
+    category: "stage",
+  },
+  {
+    id: "photo-28",
+    src: "/images/gallery/silhouette-lantern-prop.jpg",
+    altDE: "Silhouette bei der Vorbereitung eines Bühnenrequisits",
+    altEN: "Silhouette preparing a stage prop",
+    captionDE: "Vorbereitung eines Bühnenrequisits",
+    captionEN: "Preparing a stage prop",
+    category: "backstage",
+  },
+  {
+    id: "photo-29",
+    src: "/images/gallery/workshop-gothic-panels-build.jpg",
+    altDE: "Werkstattaufbau von Bühnenbild-Elementen",
+    altEN: "Workshop assembly of stage set elements",
+    captionDE: "Werkstattaufbau von Bühnenbild-Elementen",
+    captionEN: "Workshop assembly of stage set elements",
+    category: "stage",
+  },
+  {
+    id: "photo-30",
+    src: "/images/gallery/crew-conversation-backstage.jpg",
+    altDE: "Kurze Abstimmung im Backstage-Bereich",
+    altEN: "A quick check-in backstage",
+    captionDE: "Abstimmung im Backstage-Bereich",
+    captionEN: "Check-in backstage",
+    category: "backstage",
+  },
+  {
+    id: "photo-31",
+    src: "/images/gallery/skuleberget-mountain-venue.jpg",
+    altDE: "Open-Air-Bühne vor Bergkulisse",
+    altEN: "Open-air stage set against a mountain backdrop",
+    captionDE: "Open-Air-Bühne vor Bergkulisse",
+    captionEN: "Open-air stage against a mountain backdrop",
+    category: "festivals",
+  },
+  {
+    id: "photo-32",
+    src: "/images/gallery/crew-member-portrait-bw.jpg",
+    altDE: "Crew-Mitglied backstage, Schwarz-Weiß-Aufnahme",
+    altEN: "Crew member backstage, black-and-white photograph",
+    captionDE: "Crew backstage",
+    captionEN: "Crew backstage",
+    category: "backstage",
+  },
+  {
+    id: "photo-33",
+    src: "/images/gallery/tradeshow-partner-handshake.jpg",
+    altDE: "Abstimmung mit dem Partnerunternehmen beim Messebau",
+    altEN: "Coordinating with the partner company during trade show construction",
+    captionDE: "Abstimmung beim Messebau",
+    captionEN: "Coordination during trade show construction",
+    category: "tradeshow",
+  },
+];
