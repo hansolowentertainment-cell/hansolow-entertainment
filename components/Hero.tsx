@@ -18,10 +18,10 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ filter: "saturate(0.85) brightness(0.42) contrast(1.05)" }}
+          style={{ filter: "saturate(1.05) brightness(0.44) contrast(1.08)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-recessed/90 via-base/70 to-base" />
-        <div className="absolute -right-24 -top-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-[110px]" />
+        <div className="absolute -right-24 -top-32 h-[420px] w-[420px] rounded-full bg-accent/20 blur-[110px]" />
       </div>
 
       <div className="relative mx-auto grid max-w-content gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
@@ -54,11 +54,21 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             </h1>
           </div>
 
-          {/* Owner byline: solid backing chip so it stays legible regardless
-              of what's behind it in the hero photo. */}
-          <div className="mt-5 inline-flex items-center gap-2 rounded bg-recessed/80 px-3 py-2 backdrop-blur-sm">
-            <span className="stage-tag text-accent">{ownerLabel}</span>
-            <span className="text-base font-semibold text-ink sm:text-lg">{dict.hero.title}</span>
+          {/* Owner byline with a small portrait photo, so visitors connect
+              with the person behind the business, not just the brand name. */}
+          <div className="mt-5 inline-flex items-center gap-3 rounded bg-recessed/80 py-2 pl-2 pr-3 backdrop-blur-sm">
+            <Image
+              src="/images/portrait/hans-portrait.jpg"
+              alt={dict.hero.title}
+              width={40}
+              height={40}
+              className="h-10 w-10 shrink-0 rounded-full object-cover"
+              style={{ border: "1px solid #2f8fff" }}
+            />
+            <div>
+              <span className="stage-tag block text-accent">{ownerLabel}</span>
+              <span className="text-base font-semibold text-ink sm:text-lg">{dict.hero.title}</span>
+            </div>
           </div>
 
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">
